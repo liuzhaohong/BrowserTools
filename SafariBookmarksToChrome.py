@@ -7,6 +7,10 @@ import os
 ------------------------
   Safari书签导入至Chrome  
 ------------------------
+注意事项:
+1.执行过程中如果报错: PermissionError: [Errno 1] Operation not permitted: '/Users/用户/Library/Safari/Bookmarks.plist
+    解决方式: 可手动从 访达(Finder) 进入并打开此文件再关掉, 然后再次执行python即可成功.
+2.此脚本执行成功后，重启Chrome后书签生效；未重启前请勿编辑书签，以免书签被覆盖。
 """
 
 home_path = os.environ['HOME']
@@ -81,3 +85,7 @@ if __name__ == '__main__':
     print('*************Safari书签导入至Chrome开始*************')
     run()
     print('*************Safari书签导入至Chrome完成*************')
+    print('---------------注意-----------------')
+    print('重启Chrome后书签生效 请重启Chrome')
+    print('未重启前请勿编辑书签，以免书签被覆盖')
+    print('------------------------------------')
